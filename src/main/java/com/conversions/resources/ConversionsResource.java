@@ -1,5 +1,8 @@
 package com.conversions.resources;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -8,6 +11,8 @@ import javax.ws.rs.core.MediaType;
  * A REST web service that provides endpoints for celsius/kelvin and kilometer/mile conversions.
  */
 public class ConversionsResource {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConversionsResource.class);
 
     @GET
     @Path("/ktoc/{value}")
