@@ -25,4 +25,12 @@ public class ConversionsResource {
         return celsius + 273.15f;
     }
 
+    @GET
+    @Path("/mtok/{value}")
+    @Consumes({ MediaType.APPLICATION_JSON })
+    @Produces({ MediaType.APPLICATION_JSON })
+    public Float mtok(@PathParam("value") float miles) {
+        return miles * 8f / 5;
+    }
+
 }
