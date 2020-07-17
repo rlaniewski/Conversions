@@ -33,4 +33,12 @@ public class ConversionsResource {
         return miles * 8f / 5;
     }
 
+    @GET
+    @Path("/ktom/{value}")
+    @Consumes({ MediaType.APPLICATION_JSON })
+    @Produces({ MediaType.APPLICATION_JSON })
+    public Float ktom(@PathParam("value") float kilometers) {
+        return kilometers * 5f / 8;
+    }
+
 }
