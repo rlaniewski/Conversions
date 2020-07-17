@@ -19,6 +19,7 @@ public class ConversionsResource {
     @Consumes({ MediaType.APPLICATION_JSON })
     @Produces({ MediaType.APPLICATION_JSON })
     public Float ktoc(@PathParam("value") float kelvin) {
+        LOGGER.debug("(ktoc) kelvin="+kelvin);
         return kelvin - 273.15f;
     }
 
@@ -27,6 +28,7 @@ public class ConversionsResource {
     @Consumes({ MediaType.APPLICATION_JSON })
     @Produces({ MediaType.APPLICATION_JSON })
     public Float ctok(@PathParam("value") float celsius) {
+        LOGGER.debug("(ctok) celsius="+celsius);
         return celsius + 273.15f;
     }
 
@@ -35,6 +37,7 @@ public class ConversionsResource {
     @Consumes({ MediaType.APPLICATION_JSON })
     @Produces({ MediaType.APPLICATION_JSON })
     public Float mtok(@PathParam("value") float miles) {
+        LOGGER.debug("(mtok) miles="+miles);
         return miles * 8f / 5;
     }
 
@@ -43,6 +46,7 @@ public class ConversionsResource {
     @Consumes({ MediaType.APPLICATION_JSON })
     @Produces({ MediaType.APPLICATION_JSON })
     public Float ktom(@PathParam("value") float kilometers) {
+        LOGGER.debug("(ktom) kilometers="+kilometers);
         return kilometers * 5f / 8;
     }
 
