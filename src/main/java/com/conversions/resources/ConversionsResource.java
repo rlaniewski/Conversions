@@ -17,4 +17,12 @@ public class ConversionsResource {
         return kelvin - 273.15f;
     }
 
+    @GET
+    @Path("/ctok/{value}")
+    @Consumes({ MediaType.APPLICATION_JSON })
+    @Produces({ MediaType.APPLICATION_JSON })
+    public Float ctok(@PathParam("value") float celsius) {
+        return celsius + 273.15f;
+    }
+
 }
